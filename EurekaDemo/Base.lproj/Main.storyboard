@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oJR-2e-s2l">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Eureka-->
+        <scene sceneID="XJu-dK-mUV">
+            <objects>
+                <viewController id="sEv-vx-pIW" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bYo-MW-Ied">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2At-dQ-B6X">
+                                <rect key="frame" x="92" y="192" width="191" height="30"/>
+                                <state key="normal" title="Classic Way / Standard Way"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="XPI-BH-QoT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CKS-hW-3rS">
+                                <rect key="frame" x="134" y="313" width="106" height="30"/>
+                                <state key="normal" title="Customise Way"/>
+                                <connections>
+                                    <segue destination="zDF-6P-v7S" kind="show" id="oSU-CK-uhs"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="2At-dQ-B6X" firstAttribute="centerX" secondItem="bYo-MW-Ied" secondAttribute="centerX" id="0u9-C7-pYs"/>
+                            <constraint firstItem="2At-dQ-B6X" firstAttribute="top" secondItem="owf-f1-OUC" secondAttribute="top" constant="128" id="1HC-Yk-c1e"/>
+                            <constraint firstItem="CKS-hW-3rS" firstAttribute="top" secondItem="2At-dQ-B6X" secondAttribute="bottom" constant="91" id="fn9-B8-IXJ"/>
+                            <constraint firstItem="CKS-hW-3rS" firstAttribute="centerX" secondItem="bYo-MW-Ied" secondAttribute="centerX" id="liH-9c-3Bu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="owf-f1-OUC"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Eureka" id="WvJ-Yf-TQ0"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K3I-QT-kiV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="412" y="98.50074962518741"/>
+        </scene>
+        <!--Customise View Controller-->
+        <scene sceneID="3iW-0K-5Cr">
+            <objects>
+                <viewController id="zDF-6P-v7S" customClass="CustomiseViewController" customModule="EurekaDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JCr-2f-5Yo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="Lf5-uQ-57z">
+                                <rect key="frame" x="0.0" y="191" width="375" height="155"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="155" id="tRd-Nm-Ed6"/>
+                                </constraints>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ias-tq-cRg">
+                                <rect key="frame" x="168" y="606" width="38" height="30"/>
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="login_Click:" destination="zDF-6P-v7S" eventType="touchUpInside" id="XkV-0a-6PM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ias-tq-cRg" firstAttribute="centerX" secondItem="JCr-2f-5Yo" secondAttribute="centerX" id="5eN-AR-DN3"/>
+                            <constraint firstItem="soQ-eT-0s7" firstAttribute="bottom" secondItem="ias-tq-cRg" secondAttribute="bottom" constant="31" id="HGy-Fm-K4E"/>
+                            <constraint firstItem="Lf5-uQ-57z" firstAttribute="centerY" secondItem="JCr-2f-5Yo" secondAttribute="centerY" constant="-65" id="cAb-P5-ovD"/>
+                            <constraint firstItem="Lf5-uQ-57z" firstAttribute="leading" secondItem="soQ-eT-0s7" secondAttribute="leading" id="xqJ-5c-Us0"/>
+                            <constraint firstItem="Lf5-uQ-57z" firstAttribute="trailing" secondItem="soQ-eT-0s7" secondAttribute="trailing" id="zF9-bR-3aW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="soQ-eT-0s7"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="Lf5-uQ-57z" id="cU1-iz-yr8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JKC-AB-8UC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1224.8" y="236.13193403298354"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="EurekaDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1226" y="-439"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bvE-bv-Qp5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oJR-2e-s2l" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="epC-pu-5oR">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="sEv-vx-pIW" kind="relationship" relationship="rootViewController" id="pfK-A5-9SX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2N5-vu-xOg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-527.20000000000005" y="98.50074962518741"/>
+        </scene>
+    </scenes>
+</document>
