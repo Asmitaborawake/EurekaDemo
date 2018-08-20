@@ -34,6 +34,17 @@ class ViewController: FormViewController {
             $0.title = "Login"
             }.onCellSelection({ (cell, row) in  //for getting value of each row
                 print(self.form.values())
+                
+                let allFormData = self.form.values()
+                //Direct access to value
+                if let email = allFormData["enailRow"] as? String
+                {
+                    print(email) //should print only "Comments"
+                }
+                if let password = allFormData["passwordRow"] as? String
+                {
+                    print(password) //should print only "Comments"
+                }
             })
         
         
